@@ -1,3 +1,4 @@
+const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
 
@@ -10,7 +11,9 @@ const router = express.Router();
  ************************************************************/
 // Tu código acá
 
-
+router.get('/', (req, res)=> {
+	res.send("¡Hola mundo!");
+})
 
 
 
@@ -22,8 +25,25 @@ const router = express.Router();
 	http://localhost:3000/api/products
  *************************************************************/
 // Tu código acá
-let products;
+let products = [{
+	name: "Iphone",
+	id: 1,
+	price: 1000
+},
+{
+	name: "Macbook",
+	id: 2,
+	price: 1500
+},
+{
+	name: "Monitor",
+	id: 3,
+	price: 70
+}]
 
+router.get('/products', (req, res)=> {
+	res.json({products});
+})
 
 
 
