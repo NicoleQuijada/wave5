@@ -6,10 +6,12 @@ utiliza addingIdToProduct para agregarle un id único a cada producto empezando 
 *************************************************************************************/
 // Tu código acá
 let addingIdToProduct = () =>{
-	return products.map((product, id)=>{
-		return {...product, id: ++id}
+	return products.map((product, index)=>{
+		return {...product, id: ++index}
+		
 	})
-} ;
+	
+};
 
 /*****************************************************************************
  * PUNTO 2
